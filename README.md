@@ -5,6 +5,6 @@ Howdy! My name is Wolfgang and I will use this GitHub repo to document, showcase
 Thank you for checking this out, and I hope to not disappoint!
 
 
-## Table oF Contents
+## Table of Contents
 
 
