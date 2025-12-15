@@ -1,0 +1,33 @@
+import pygame
+from pygame.locals import *
+
+def main():
+    #initialize pygame
+    pygame.init() 
+    screen = pygame.display.set_mode((1500, 1020)) #screen size
+    pygame.display.set_caption("Basic Game") #game name
+
+    #fill background
+    background = pygame.Surface(screen.get_size())
+    background = background.convert()
+    background.fill((20, 25, 200))
+
+    #display font
+    font = pygame.font.Font(None, 36)
+    text = font.render("Was good yo?", 1, (10, 10, 10))
+    textpos = text.get_rect()
+    textpos.centerx = background.get_rect().centerx
+    background.blit(text, textpos)
+
+    #render (blit)
+    screen.blit(background, (0, 0))
+    pygame.display.flip()
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                return
+        screen.blit(background, (0, 0))
+        pygame.display.flip()
+
+if __name__ == '__main__': main()
